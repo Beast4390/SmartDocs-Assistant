@@ -23,11 +23,23 @@ class RAGService:
             top_k=3
         )
 
+        print("\n========== RETRIEVED CHUNKS ==========")
+
+        for i, chunk in enumerate(chunks, start=1):
+            print(f"\nChunk {i}")
+            print(chunk)
+
         context = "\n\n".join(chunks)
+
+        print("\n========== CONTEXT ==========")
+        print(context)
 
         answer = self.ollama.generate_answer(
             context,
             question
         )
+
+        print("\n========== ANSWER ==========")
+        print(answer)
 
         return answer
