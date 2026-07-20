@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Executive Reports | SmartDocs Assistant</title>
+
+    <!-- Bootstrap 5 -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="../static/css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../static/css/reports.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside id="sidebar">
+
+        <div class="logo">
+
+            <i class="bi bi-file-earmark-text-fill"></i>
+
+            <span>SmartDocs</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="bi bi-grid-fill"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="upload.html">
+
+                    <i class="bi bi-upload"></i>
+
+                    Upload Documents
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="chat.html">
+
+                    <i class="bi bi-chat-dots-fill"></i>
+
+                    AI Chat
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="compare.html">
+
+                    <i class="bi bi-files"></i>
+
+                    Compare Documents
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="#">
+
+                    <i class="bi bi-file-earmark-bar-graph-fill"></i>
+
+                    Executive Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="bi bi-gear-fill"></i>
+
+                    Settings
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="sidebar-footer">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Ollama Connected
+
+            </div>
+
+            <small>
+
+                Offline Mode Enabled
+
+            </small>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Top Navbar -->
+
+        <nav class="navbar bg-white shadow-sm rounded-4 mb-4 px-4 py-3">
+
+            <button class="btn btn-light me-3"
+                    id="toggleSidebar">
+
+                <i class="bi bi-list fs-4"></i>
+
+            </button>
+
+            <div class="flex-grow-1">
+
+                <h4 class="fw-bold mb-0">
+
+                    Executive Reports
+
+                </h4>
+
+                <small class="text-muted">
+
+                    Generate AI-powered enterprise reports from your knowledge base.
+
+                </small>
+
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <button class="btn btn-light me-3">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+                <img src="https://i.pravatar.cc/45"
+                     class="rounded-circle"
+                     width="45"
+                     height="45"
+                     alt="User">
+
+            </div>
+
+        </nav>
+
+        <!-- ================= Page Header ================= -->
+
+        <div class="card border-0 shadow rounded-4 mb-5">
+
+            <div class="card-body">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-8">
+
+                        <h2 class="fw-bold">
+
+                            AI Executive Report Generator
+
+                        </h2>
+
+                        <p class="text-muted mt-3">
+
+                            Generate professional executive reports,
+                            summaries, compliance documents,
+                            meeting notes, and business insights
+                            using your offline AI knowledge base.
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-4 text-end">
+
+                        <button class="btn btn-primary btn-lg">
+
+                            <i class="bi bi-stars me-2"></i>
+
+                            Generate Report
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Report Generator ================= -->
+
+        <section>
+
+            <div class="row g-4">
+
+                <!-- Left Panel -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Report Configuration
+
+                            </h4>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+
+                                    Select Report Type
+
+                                </label>
+
+                                <select class="form-select form-select-lg">
+
+                                    <option selected>
+
+                                        Executive Summary
+
+                                    </option>
+
+                                    <option>
+
+                                        Financial Analysis
+
+                                    </option>
+
+                                    <option>
+
+                                        Compliance Report
+
+                                    </option>
+
+                                    <option>
+
+                                        HR Summary
+
+                                    </option>
+
+                                    <option>
+
+                                        Meeting Notes
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+
+                                    Select Document
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+
+                                        Annual_Report_2025.pdf
+
+                                    </option>
+
+                                    <option>
+
+                                        HR_Policy.docx
+
+                                    </option>
+
+                                    <option>
+
+                                        Finance_Report.pdf
+
+                                    </option>
+
+                                    <option>
+
+                                        Company_Policy.docx
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+
+                                    Language
+
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+
+                                        English
+
+                                    </option>
+
+                                    <option>
+
+                                        Telugu
+
+                                    </option>
+
+                                    <option>
+
+                                        Hindi
+
+                                    </option>
+
+                                    <option>
+
+                                        Tamil
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+
+                                    Additional Instructions
+
+                                </label>
+
+                                <textarea class="form-control"
+                                          rows="5"
+                                          placeholder="Enter additional instructions for AI..."></textarea>
+
+                            </div>
+
+                            <button class="btn btn-primary btn-lg w-100">
+
+                                <i class="bi bi-magic me-2"></i>
+
+                                Generate AI Report
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Panel -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Report Templates
+
+                            </h4>
+
+                            <div class="list-group">
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    📄 Executive Summary
+
+                                </a>
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    📊 Financial Analysis
+
+                                </a>
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    📑 Compliance Report
+
+                                </a>
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    👥 HR Performance Report
+
+                                </a>
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    📋 Meeting Minutes
+
+                                </a>
+
+                                <a href="#"
+                                   class="list-group-item list-group-item-action">
+
+                                    🌍 Multilingual Report
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= AI Generated Report Preview ================= -->
+
+        <section class="mt-5">
+
+            <div class="card border-0 shadow rounded-4">
+
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h3 class="fw-bold">
+
+                            AI Generated Report Preview
+
+                        </h3>
+
+                        <span class="badge bg-success px-3 py-2">
+
+                            Ready
+
+                        </span>
+
+                    </div>
+
+                    <h4 class="fw-bold">
+
+                        Executive Summary
+
+                    </h4>
+
+                    <p class="text-muted">
+
+                        SmartDocs Assistant analyzed the selected enterprise
+                        documents and generated the following executive
+                        summary. This report highlights the most important
+                        findings, compliance observations, operational
+                        insights, and recommendations.
+
+                    </p>
+
+                    <hr>
+
+                    <h5 class="fw-bold">
+
+                        Key Highlights
+
+                    </h5>
+
+                    <ul>
+
+                        <li>
+
+                            Employee attendance compliance exceeds 95%.
+
+                        </li>
+
+                        <li>
+
+                            HR policies align with company governance.
+
+                        </li>
+
+                        <li>
+
+                            Financial reporting follows organizational standards.
+
+                        </li>
+
+                        <li>
+
+                            Minor inconsistencies were detected in approval workflows.
+
+                        </li>
+
+                    </ul>
+
+                    <hr>
+
+                    <h5 class="fw-bold">
+
+                        AI Recommendations
+
+                    </h5>
+
+                    <div class="alert alert-primary border-0">
+
+                        Standardize approval workflows across departments to
+                        reduce operational delays.
+
+                    </div>
+
+                    <div class="alert alert-success border-0">
+
+                        Continue maintaining centralized HR documentation.
+
+                    </div>
+
+                    <div class="alert alert-warning border-0">
+
+                        Review compliance procedures every quarter.
+
+                    </div>
+
+                    <hr>
+
+                    <h5 class="fw-bold">
+
+                        Source Citations
+
+                    </h5>
+
+                    <span class="badge bg-light text-dark me-2">
+
+                        HR Policy.pdf - Page 3
+
+                    </span>
+
+                    <span class="badge bg-light text-dark me-2">
+
+                        Finance Report.pdf - Page 8
+
+                    </span>
+
+                    <span class="badge bg-light text-dark">
+
+                        Company Policy.docx - Section 4
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Analytics ================= -->
+
+        <section class="mt-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-file-earmark-text-fill display-4 text-primary"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                154
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Documents Analyzed
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-bar-chart-fill display-4 text-success"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                98%
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                AI Confidence
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-lightning-charge-fill display-4 text-warning"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                2.1 s
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Report Generation
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-translate display-4 text-info"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                48
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Supported Languages
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Charts Placeholder ================= -->
+
+        <section class="mt-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Document Insights
+
+                            </h4>
+
+                            <div class="bg-light rounded-4 d-flex align-items-center justify-content-center"
+                                 style="height:280px;">
+
+                                <div class="text-center">
+
+                                    <i class="bi bi-bar-chart-line display-3 text-primary"></i>
+
+                                    <p class="mt-3 text-muted">
+
+                                        Analytics Chart Placeholder
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                AI Insights Distribution
+
+                            </h4>
+
+                            <div class="bg-light rounded-4 d-flex align-items-center justify-content-center"
+                                 style="height:280px;">
+
+                                <div class="text-center">
+
+                                    <i class="bi bi-pie-chart-fill display-3 text-success"></i>
+
+                                    <p class="mt-3 text-muted">
+
+                                        Pie Chart Placeholder
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ================= Export Section ================= -->
+
+        <section class="mt-5">
+
+            <div class="card border-0 shadow rounded-4">
+
+                <div class="card-body">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-8">
+
+                            <h3 class="fw-bold">
+
+                                Export AI Report
+
+                            </h3>
+
+                            <p class="text-muted mb-0">
+
+                                Download the generated report in your preferred
+                                format for presentations, meetings, or record
+                                keeping.
+
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                            <button class="btn btn-danger me-2">
+
+                                <i class="bi bi-file-earmark-pdf-fill me-2"></i>
+
+                                PDF
+
+                            </button>
+
+                            <button class="btn btn-primary me-2">
+
+                                <i class="bi bi-file-earmark-word-fill me-2"></i>
+
+                                DOCX
+
+                            </button>
+
+                            <button class="btn btn-warning text-dark">
+
+                                <i class="bi bi-file-earmark-ppt-fill me-2"></i>
+
+                                PPTX
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent Reports ================= -->
+
+        <section class="mt-5">
+
+            <div class="card border-0 shadow rounded-4">
+
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h3 class="fw-bold">
+
+                            Recently Generated Reports
+
+                        </h3>
+
+                        <button class="btn btn-outline-primary">
+
+                            View All
+
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Report Name</th>
+
+                                    <th>Type</th>
+
+                                    <th>Date</th>
+
+                                    <th>Status</th>
+
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>Executive Summary - HR</td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary">
+
+                                            Executive
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Today</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <button class="btn btn-sm btn-outline-primary">
+
+                                            Download
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Finance Analysis</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Financial
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Yesterday</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <button class="btn btn-sm btn-outline-primary">
+
+                                            Download
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Compliance Report</td>
+
+                                    <td>
+
+                                        <span class="badge bg-warning text-dark">
+
+                                            Compliance
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>18 Jul 2026</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <button class="btn btn-sm btn-outline-primary">
+
+                                            Download
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Meeting Notes</td>
+
+                                    <td>
+
+                                        <span class="badge bg-info">
+
+                                            Notes
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>16 Jul 2026</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <button class="btn btn-sm btn-outline-primary">
+
+                                            Download
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="mt-5 pt-4 pb-3">
+
+            <hr>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <div>
+
+                    <h5 class="fw-bold text-primary">
+
+                        SmartDocs Assistant
+
+                    </h5>
+
+                    <p class="text-muted mb-0">
+
+                        Offline Enterprise AI Knowledge Intelligence Platform
+
+                    </p>
+
+                </div>
+
+                <div class="mt-3 mt-md-0">
+
+                    <a href="#" class="text-decoration-none me-3">
+
+                        <i class="bi bi-github fs-4"></i>
+
+                    </a>
+
+                    <a href="#" class="text-decoration-none me-3">
+
+                        <i class="bi bi-linkedin fs-4"></i>
+
+                    </a>
+
+                    <a href="#" class="text-decoration-none">
+
+                        <i class="bi bi-globe fs-4"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="text-center text-muted mt-4">
+
+                © 2026 SmartDocs Assistant | Hackathon Project | Team Name
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Bootstrap Bundle JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Reports Page JavaScript -->
+
+<script src="../static/js/reports.js"></script>
+
+</body>
+
+</html>

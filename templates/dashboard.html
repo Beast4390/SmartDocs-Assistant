@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartDocs Assistant Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside id="sidebar">
+
+        <div class="logo">
+
+            <i class="bi bi-file-earmark-text-fill"></i>
+
+            <span>SmartDocs</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="#">
+                    <i class="bi bi-grid-fill"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-upload"></i>
+                    Upload Documents
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    AI Chat
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-search"></i>
+                    Compare Docs
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                    AI Insights
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-file-earmark-text"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-gear-fill"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-footer">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Ollama Connected
+
+            </div>
+
+            <small>Offline Mode Enabled</small>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-content">
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded-4 mb-4 px-4 py-3">
+
+            <button class="btn btn-light me-3" id="toggleSidebar">
+
+                <i class="bi bi-list fs-4"></i>
+
+            </button>
+
+            <form class="d-flex flex-grow-1">
+
+                <div class="input-group">
+
+                    <span class="input-group-text bg-white">
+
+                        <i class="bi bi-search"></i>
+
+                    </span>
+
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="Search documents, reports, chats..."
+                    >
+
+                </div>
+
+            </form>
+
+            <div class="d-flex align-items-center ms-4">
+
+                <button class="btn btn-light position-relative me-3">
+
+                    <i class="bi bi-bell fs-5"></i>
+
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                    </span>
+
+                </button>
+
+                <img
+                    src="https://i.pravatar.cc/45"
+                    class="rounded-circle me-2"
+                    width="45"
+                    height="45"
+                    alt="User">
+
+                <div>
+
+                    <h6 class="mb-0">Kowshik</h6>
+
+                    <small class="text-muted">Frontend Developer</small>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- Welcome Banner -->
+
+        <section class="welcome-banner">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="fw-bold">
+
+                        Welcome Back 👋
+
+                    </h2>
+
+                    <p class="mt-3">
+
+                        SmartDocs Assistant helps you securely upload enterprise
+                        documents, search your knowledge base, chat with AI,
+                        compare files, and generate executive reports using
+                        Offline Ollama.
+
+                    </p>
+
+                    <button class="btn btn-primary btn-lg mt-3">
+
+                        <i class="bi bi-upload me-2"></i>
+
+                        Upload Documents
+
+                    </button>
+
+                </div>
+
+                <div class="col-lg-4 text-center">
+
+                    <img
+                        src="https://undraw.co/api/illustrations/undraw_file_searching_re_3evy.svg"
+                        class="img-fluid"
+                        alt="AI">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics Cards -->
+
+        <section class="mt-5">
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="icon bg-primary">
+
+                            <i class="bi bi-file-earmark-text-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <h3>154</h3>
+
+                            <p>Total Documents</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="icon bg-success">
+
+                            <i class="bi bi-chat-left-text-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <h3>1,245</h3>
+
+                            <p>AI Queries</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Card 3 -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="icon bg-warning">
+
+                            <i class="bi bi-globe2"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <h3>48</h3>
+
+                            <p>Languages Supported</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="icon bg-danger">
+
+                            <i class="bi bi-file-earmark-bar-graph-fill"></i>
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <h3>86</h3>
+
+                            <p>Reports Generated</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Quick Actions ================= -->
+
+        <section class="mt-5">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <h3 class="fw-bold">
+
+                    Quick Actions
+
+                </h3>
+
+                <small class="text-muted">
+
+                    Frequently Used Tools
+
+                </small>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="action-card">
+
+                        <i class="bi bi-upload display-5 text-primary"></i>
+
+                        <h5 class="mt-3">
+
+                            Upload Documents
+
+                        </h5>
+
+                        <p>
+
+                            Import PDF, DOCX and PPTX files into SmartDocs.
+
+                        </p>
+
+                        <button class="btn btn-primary w-100">
+
+                            Upload
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="action-card">
+
+                        <i class="bi bi-chat-dots display-5 text-success"></i>
+
+                        <h5 class="mt-3">
+
+                            AI Chat
+
+                        </h5>
+
+                        <p>
+
+                            Ask questions using voice or text.
+
+                        </p>
+
+                        <button class="btn btn-success w-100">
+
+                            Start Chat
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="action-card">
+
+                        <i class="bi bi-files display-5 text-warning"></i>
+
+                        <h5 class="mt-3">
+
+                            Compare Documents
+
+                        </h5>
+
+                        <p>
+
+                            Compare multiple files and discover differences.
+
+                        </p>
+
+                        <button class="btn btn-warning w-100">
+
+                            Compare
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="action-card">
+
+                        <i class="bi bi-file-earmark-pdf display-5 text-danger"></i>
+
+                        <h5 class="mt-3">
+
+                            Executive Reports
+
+                        </h5>
+
+                        <p>
+
+                            Generate AI-powered business reports instantly.
+
+                        </p>
+
+                        <button class="btn btn-danger w-100">
+
+                            Generate
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Main Content ================= -->
+
+        <section class="mt-5">
+
+            <div class="row">
+
+                <!-- Recent Documents -->
+
+                <div class="col-lg-8">
+
+                    <div class="content-card">
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <h4 class="fw-bold">
+
+                                Recent Documents
+
+                            </h4>
+
+                            <button class="btn btn-outline-primary">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+                        <div class="table-responsive">
+
+                            <table class="table align-middle">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Document</th>
+
+                                        <th>Type</th>
+
+                                        <th>Status</th>
+
+                                        <th>Date</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>HR Policy.pdf</td>
+
+                                        <td>
+
+                                            <span class="badge bg-danger">
+
+                                                PDF
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge bg-success">
+
+                                                Indexed
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>Today</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>Finance Report.docx</td>
+
+                                        <td>
+
+                                            <span class="badge bg-primary">
+
+                                                DOCX
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge bg-warning text-dark">
+
+                                                Processing
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>Yesterday</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>Sales Presentation.pptx</td>
+
+                                        <td>
+
+                                            <span class="badge bg-info">
+
+                                                PPTX
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge bg-success">
+
+                                                Completed
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>Monday</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>Legal Agreement.pdf</td>
+
+                                        <td>
+
+                                            <span class="badge bg-danger">
+
+                                                PDF
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge bg-success">
+
+                                                Indexed
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>18 Jul</td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- ================= Right Sidebar ================= -->
+
+                <div class="col-lg-4">
+
+                    <!-- AI Status -->
+
+                    <div class="content-card mb-4">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <h4 class="fw-bold mb-0">
+                                AI Status
+                            </h4>
+
+                            <span class="badge bg-success">
+                                Online
+                            </span>
+
+                        </div>
+
+                        <div class="status-item d-flex justify-content-between mb-3">
+
+                            <span>Ollama Engine</span>
+
+                            <strong class="text-success">Running</strong>
+
+                        </div>
+
+                        <div class="status-item d-flex justify-content-between mb-3">
+
+                            <span>AI Model</span>
+
+                            <strong>Llama 3</strong>
+
+                        </div>
+
+                        <div class="status-item d-flex justify-content-between mb-3">
+
+                            <span>Mode</span>
+
+                            <strong>Offline</strong>
+
+                        </div>
+
+                        <div class="status-item d-flex justify-content-between mb-3">
+
+                            <span>Privacy</span>
+
+                            <strong class="text-primary">
+                                Enabled
+                            </strong>
+
+                        </div>
+
+                        <div class="status-item d-flex justify-content-between">
+
+                            <span>Last Sync</span>
+
+                            <strong>Just Now</strong>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Recent Activity -->
+
+                    <div class="content-card mb-4">
+
+                        <h4 class="fw-bold mb-4">
+                            Recent Activity
+                        </h4>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item mb-4">
+
+                                <div class="d-flex">
+
+                                    <div class="timeline-dot bg-primary me-3"></div>
+
+                                    <div>
+
+                                        <h6 class="mb-1">
+                                            HR Policy Uploaded
+                                        </h6>
+
+                                        <small class="text-muted">
+                                            2 minutes ago
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-item mb-4">
+
+                                <div class="d-flex">
+
+                                    <div class="timeline-dot bg-success me-3"></div>
+
+                                    <div>
+
+                                        <h6 class="mb-1">
+                                            AI Report Generated
+                                        </h6>
+
+                                        <small class="text-muted">
+                                            15 minutes ago
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-item mb-4">
+
+                                <div class="d-flex">
+
+                                    <div class="timeline-dot bg-warning me-3"></div>
+
+                                    <div>
+
+                                        <h6 class="mb-1">
+                                            Finance File Indexed
+                                        </h6>
+
+                                        <small class="text-muted">
+                                            1 hour ago
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-item">
+
+                                <div class="d-flex">
+
+                                    <div class="timeline-dot bg-danger me-3"></div>
+
+                                    <div>
+
+                                        <h6 class="mb-1">
+                                            Voice Query Executed
+                                        </h6>
+
+                                        <small class="text-muted">
+                                            Today, 09:30 AM
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Storage Card -->
+
+                    <div class="content-card">
+
+                        <h4 class="fw-bold mb-3">
+                            Storage Usage
+                        </h4>
+
+                        <p class="mb-2">
+                            7.4 GB of 10 GB Used
+                        </p>
+
+                        <div class="progress mb-3" style="height:10px;">
+
+                            <div class="progress-bar bg-primary"
+                                 style="width:74%">
+                            </div>
+
+                        </div>
+
+                        <small class="text-muted">
+                            Your offline knowledge base is almost full.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="mt-5 pt-4 pb-3">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <div>
+
+                    <h5 class="fw-bold text-primary">
+                        SmartDocs Assistant
+                    </h5>
+
+                    <p class="text-muted mb-0">
+                        Offline Enterprise AI Knowledge Intelligence Platform
+                    </p>
+
+                </div>
+
+                <div class="mt-3 mt-md-0">
+
+                    <a href="#" class="text-decoration-none me-3">
+                        <i class="bi bi-github fs-4"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration-none me-3">
+                        <i class="bi bi-linkedin fs-4"></i>
+                    </a>
+
+                    <a href="#" class="text-decoration-none">
+                        <i class="bi bi-globe fs-4"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center text-muted">
+
+                © 2026 SmartDocs Assistant • Hackathon Project • Team Name
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dashboard JavaScript -->
+
+<script src="../static/js/dashboard.js"></script>
+
+</body>
+
+</html>

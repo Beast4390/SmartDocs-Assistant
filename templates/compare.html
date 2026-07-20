@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Compare Documents | SmartDocs Assistant</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../static/css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../static/css/compare.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside id="sidebar">
+
+        <div class="logo">
+
+            <i class="bi bi-file-earmark-text-fill"></i>
+
+            <span>SmartDocs</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="bi bi-grid-fill"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="upload.html">
+
+                    <i class="bi bi-upload"></i>
+
+                    Upload Documents
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="chat.html">
+
+                    <i class="bi bi-chat-dots-fill"></i>
+
+                    AI Chat
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="#">
+
+                    <i class="bi bi-files"></i>
+
+                    Compare Documents
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html">
+
+                    <i class="bi bi-file-earmark-bar-graph"></i>
+
+                    Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="bi bi-gear-fill"></i>
+
+                    Settings
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="sidebar-footer">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Ollama Connected
+
+            </div>
+
+            <small>
+
+                Offline Mode Enabled
+
+            </small>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Top Navbar -->
+
+        <nav class="navbar bg-white shadow-sm rounded-4 mb-4 px-4 py-3">
+
+            <button class="btn btn-light me-3"
+                    id="toggleSidebar">
+
+                <i class="bi bi-list fs-4"></i>
+
+            </button>
+
+            <div class="flex-grow-1">
+
+                <h4 class="fw-bold mb-0">
+
+                    Compare Documents
+
+                </h4>
+
+                <small class="text-muted">
+
+                    Compare multiple enterprise documents using AI.
+
+                </small>
+
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <button class="btn btn-light me-3">
+
+                    <i class="bi bi-bell"></i>
+
+                </button>
+
+                <img src="https://i.pravatar.cc/45"
+                     class="rounded-circle"
+                     width="45"
+                     height="45"
+                     alt="User">
+
+            </div>
+
+        </nav>
+
+        <!-- ================= Header ================= -->
+
+        <div class="compare-header card border-0 shadow rounded-4 mb-5">
+
+            <div class="card-body">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-8">
+
+                        <h2 class="fw-bold">
+
+                            AI Document Comparison
+
+                        </h2>
+
+                        <p class="text-muted mt-3">
+
+                            Select two documents and let SmartDocs Assistant
+                            identify similarities, differences, risks,
+                            and generate an executive summary.
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-4 text-end">
+
+                        <button class="btn btn-primary btn-lg">
+
+                            <i class="bi bi-stars me-2"></i>
+
+                            Compare Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Document Selection ================= -->
+
+        <section>
+
+            <div class="row g-4">
+
+                <!-- Document A -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Document A
+
+                            </h4>
+
+                            <select class="form-select form-select-lg mb-4">
+
+                                <option selected>
+
+                                    Select Document
+
+                                </option>
+
+                                <option>
+
+                                    HR Policy.pdf
+
+                                </option>
+
+                                <option>
+
+                                    Finance Report.pdf
+
+                                </option>
+
+                                <option>
+
+                                    Company Policy.docx
+
+                                </option>
+
+                                <option>
+
+                                    Marketing Strategy.pptx
+
+                                </option>
+
+                            </select>
+
+                            <div class="file-preview text-center">
+
+                                <i class="bi bi-file-earmark-pdf display-1 text-danger"></i>
+
+                                <h5 class="mt-3">
+
+                                    HR Policy.pdf
+
+                                </h5>
+
+                                <p class="text-muted">
+
+                                    PDF • 12.4 MB
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Document B -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 h-100">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Document B
+
+                            </h4>
+
+                            <select class="form-select form-select-lg mb-4">
+
+                                <option selected>
+
+                                    Select Document
+
+                                </option>
+
+                                <option>
+
+                                    HR Policy.pdf
+
+                                </option>
+
+                                <option>
+
+                                    Finance Report.pdf
+
+                                </option>
+
+                                <option>
+
+                                    Company Policy.docx
+
+                                </option>
+
+                                <option>
+
+                                    Marketing Strategy.pptx
+
+                                </option>
+
+                            </select>
+
+                            <div class="file-preview text-center">
+
+                                <i class="bi bi-file-earmark-word display-1 text-primary"></i>
+
+                                <h5 class="mt-3">
+
+                                    Company Policy.docx
+
+                                </h5>
+
+                                <p class="text-muted">
+
+                                    DOCX • 6.8 MB
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= AI Comparison Results ================= -->
+
+        <section class="mt-5">
+
+            <div class="row">
+                <!-- ================= Left Panel ================= -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 mb-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Similarities
+
+                            </h4>
+
+                            <div class="alert alert-success border-0">
+
+                                <i class="bi bi-check-circle-fill me-2"></i>
+
+                                Both documents define employee responsibilities.
+
+                            </div>
+
+                            <div class="alert alert-success border-0">
+
+                                <i class="bi bi-check-circle-fill me-2"></i>
+
+                                Workplace ethics are explained in both documents.
+
+                            </div>
+
+                            <div class="alert alert-success border-0">
+
+                                <i class="bi bi-check-circle-fill me-2"></i>
+
+                                Attendance policies are consistent.
+
+                            </div>
+
+                            <div class="alert alert-success border-0">
+
+                                <i class="bi bi-check-circle-fill me-2"></i>
+
+                                Both include disciplinary procedures.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card border-0 shadow rounded-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Key Metrics
+
+                            </h4>
+
+                            <div class="mb-4">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <span>Similarity Score</span>
+
+                                    <strong>89%</strong>
+
+                                </div>
+
+                                <div class="progress mt-2">
+
+                                    <div class="progress-bar bg-success"
+                                         style="width:89%">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <span>Differences</span>
+
+                                    <strong>11%</strong>
+
+                                </div>
+
+                                <div class="progress mt-2">
+
+                                    <div class="progress-bar bg-danger"
+                                         style="width:11%">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <div class="d-flex justify-content-between">
+
+                                    <span>AI Confidence</span>
+
+                                    <strong>97%</strong>
+
+                                </div>
+
+                                <div class="progress mt-2">
+
+                                    <div class="progress-bar bg-primary"
+                                         style="width:97%">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= Right Panel ================= -->
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow rounded-4 mb-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                Differences
+
+                            </h4>
+
+                            <div class="alert alert-danger border-0">
+
+                                <i class="bi bi-x-circle-fill me-2"></i>
+
+                                HR Policy includes leave management.
+
+                            </div>
+
+                            <div class="alert alert-danger border-0">
+
+                                <i class="bi bi-x-circle-fill me-2"></i>
+
+                                Company Policy contains governance rules.
+
+                            </div>
+
+                            <div class="alert alert-danger border-0">
+
+                                <i class="bi bi-x-circle-fill me-2"></i>
+
+                                Different approval workflows.
+
+                            </div>
+
+                            <div class="alert alert-danger border-0">
+
+                                <i class="bi bi-x-circle-fill me-2"></i>
+
+                                Different employee evaluation criteria.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card border-0 shadow rounded-4">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold mb-4">
+
+                                AI Executive Summary
+
+                            </h4>
+
+                            <p>
+
+                                SmartDocs AI analyzed both documents and found
+                                that they share a strong common policy
+                                framework. The HR Policy primarily focuses on
+                                employee operations, benefits, attendance,
+                                and leave management, while the Company Policy
+                                emphasizes governance, organizational
+                                structure, compliance, and strategic
+                                regulations.
+
+                            </p>
+
+                            <div class="mt-4">
+
+                                <span class="badge bg-success me-2">
+
+                                    Similarity 89%
+
+                                </span>
+
+                                <span class="badge bg-danger me-2">
+
+                                    Differences 11%
+
+                                </span>
+
+                                <span class="badge bg-primary">
+
+                                    AI Generated
+
+                                </span>
+
+                            </div>
+
+                            <hr>
+
+                            <h6 class="fw-bold">
+
+                                Citations
+
+                            </h6>
+
+                            <span class="badge bg-light text-dark me-2">
+
+                                HR Policy.pdf - Page 3
+
+                            </span>
+
+                            <span class="badge bg-light text-dark me-2">
+
+                                Company Policy.docx - Page 6
+
+                            </span>
+
+                            <span class="badge bg-light text-dark">
+
+                                Page 12
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ================= Comparison Statistics ================= -->
+
+        <section class="mt-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-files display-4 text-primary"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                154
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Documents Indexed
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-arrow-left-right display-4 text-success"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                48
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Comparisons Today
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-lightning-charge-fill display-4 text-warning"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                1.6s
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Average Response
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="card border-0 shadow rounded-4 text-center h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-shield-check display-4 text-info"></i>
+
+                            <h2 class="fw-bold mt-3">
+
+                                100%
+
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Offline & Secure
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Export Section ================= -->
+
+        <section class="mt-5">
+
+            <div class="card border-0 shadow rounded-4">
+
+                <div class="card-body">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-8">
+
+                            <h3 class="fw-bold">
+
+                                Export Comparison Report
+
+                            </h3>
+
+                            <p class="text-muted mb-0">
+
+                                Download the AI-generated comparison report
+                                with executive summary, similarities,
+                                differences, and citations.
+
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                            <button class="btn btn-danger me-2">
+
+                                <i class="bi bi-file-earmark-pdf-fill me-2"></i>
+
+                                PDF
+
+                            </button>
+
+                            <button class="btn btn-primary">
+
+                                <i class="bi bi-file-earmark-word-fill me-2"></i>
+
+                                DOCX
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent Comparisons ================= -->
+
+        <section class="mt-5">
+
+            <div class="card border-0 shadow rounded-4">
+
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h3 class="fw-bold">
+
+                            Recent Comparisons
+
+                        </h3>
+
+                        <button class="btn btn-outline-primary">
+
+                            View All
+
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Document A</th>
+
+                                    <th>Document B</th>
+
+                                    <th>Similarity</th>
+
+                                    <th>Date</th>
+
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>HR Policy.pdf</td>
+
+                                    <td>Company Policy.docx</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            89%
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Today</td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Finance Report.pdf</td>
+
+                                    <td>Annual Report.pdf</td>
+
+                                    <td>
+
+                                        <span class="badge bg-warning text-dark">
+
+                                            72%
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>Yesterday</td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Marketing Strategy.pptx</td>
+
+                                    <td>Sales Report.pdf</td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">
+
+                                            91%
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>18 Jul 2026</td>
+
+                                    <td>
+
+                                        <span class="badge bg-primary">
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="mt-5 pt-4 pb-3">
+
+            <hr>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <div>
+
+                    <h5 class="fw-bold text-primary">
+
+                        SmartDocs Assistant
+
+                    </h5>
+
+                    <p class="text-muted mb-0">
+
+                        Offline Enterprise AI Knowledge Intelligence Platform
+
+                    </p>
+
+                </div>
+
+                <div class="mt-3 mt-md-0">
+
+                    <a href="#" class="text-decoration-none me-3">
+
+                        <i class="bi bi-github fs-4"></i>
+
+                    </a>
+
+                    <a href="#" class="text-decoration-none me-3">
+
+                        <i class="bi bi-linkedin fs-4"></i>
+
+                    </a>
+
+                    <a href="#" class="text-decoration-none">
+
+                        <i class="bi bi-globe fs-4"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="text-center text-muted mt-4">
+
+                © 2026 SmartDocs Assistant | Hackathon Project | Team Name
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Compare Page JavaScript -->
+
+<script src="../static/js/compare.js"></script>
+
+</body>
+
+</html>
