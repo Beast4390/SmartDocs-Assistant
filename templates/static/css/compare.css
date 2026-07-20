@@ -1,0 +1,331 @@
+/*==================================================
+    SmartDocs Assistant
+    compare.css
+==================================================*/
+
+/*==============================
+    Compare Header
+==============================*/
+
+.compare-header{
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+    color:#fff;
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.compare-header h2{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.compare-header p{
+    opacity:.9;
+    margin:0;
+}
+
+/*==============================
+    Upload Panels
+==============================*/
+
+.compare-upload{
+    background:#fff;
+    border:2px dashed #2563EB;
+    border-radius:20px;
+    padding:40px 25px;
+    text-align:center;
+    transition:.3s;
+    cursor:pointer;
+    height:100%;
+}
+
+.compare-upload:hover{
+    background:#EFF6FF;
+    transform:translateY(-5px);
+}
+
+.compare-upload.dragover{
+    background:#DBEAFE;
+    border-color:#1D4ED8;
+}
+
+.compare-upload i{
+    font-size:60px;
+    color:#2563EB;
+    margin-bottom:18px;
+}
+
+.compare-upload h5{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.compare-upload p{
+    color:#64748B;
+}
+
+/*==============================
+    File Preview
+==============================*/
+
+.file-preview{
+    margin-top:20px;
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.file-preview h6{
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.file-preview small{
+    color:#64748B;
+}
+
+.file-icon{
+    font-size:34px;
+    color:#2563EB;
+    margin-right:12px;
+}
+
+/*==============================
+    Compare Button
+==============================*/
+
+.compare-action{
+    text-align:center;
+    margin:35px 0;
+}
+
+.compare-action .btn{
+    padding:12px 35px;
+    font-weight:600;
+}
+
+/*==============================
+    Similarity Card
+==============================*/
+
+.similarity-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    text-align:center;
+}
+
+.similarity-circle{
+    width:170px;
+    height:170px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.similarity-circle h2{
+    font-size:42px;
+    font-weight:700;
+    margin:0;
+}
+
+.similarity-circle span{
+    font-size:14px;
+    opacity:.9;
+}
+
+/*==============================
+    Result Cards
+==============================*/
+
+.result-card{
+    background:#fff;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    margin-top:25px;
+}
+
+.result-card h5{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.result-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.result-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.result-list li:last-child{
+    border-bottom:none;
+}
+
+.result-list i{
+    color:#10B981;
+    font-size:18px;
+    margin-top:2px;
+}
+
+/*==============================
+    Differences Table
+==============================*/
+
+.compare-table{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    margin-top:25px;
+}
+
+.compare-table table{
+    margin:0;
+}
+
+.compare-table th{
+    background:#EFF6FF;
+    color:#1E293B;
+    font-weight:600;
+}
+
+.compare-table td,
+.compare-table th{
+    padding:16px;
+    vertical-align:middle;
+}
+
+.match{
+    color:#10B981;
+    font-weight:600;
+}
+
+.partial{
+    color:#F59E0B;
+    font-weight:600;
+}
+
+.different{
+    color:#EF4444;
+    font-weight:600;
+}
+
+/*==============================
+    AI Summary
+==============================*/
+
+.ai-summary{
+    background:#EFF6FF;
+    border-left:5px solid #2563EB;
+    border-radius:14px;
+    padding:22px;
+    margin-top:25px;
+}
+
+.ai-summary h5{
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.ai-summary p{
+    margin:0;
+    color:#334155;
+    line-height:1.8;
+}
+
+/*==============================
+    Empty State
+==============================*/
+
+.empty-compare{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.empty-compare i{
+    font-size:80px;
+    color:#CBD5E1;
+    margin-bottom:20px;
+}
+
+.empty-compare h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.empty-compare p{
+    color:#64748B;
+}
+
+/*==============================
+    Loading State
+==============================*/
+
+.compare-loading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    padding:30px;
+    color:#2563EB;
+    font-weight:600;
+}
+
+.compare-loading .spinner-border{
+    width:2rem;
+    height:2rem;
+}
+
+/*==============================
+    Responsive
+==============================*/
+
+@media(max-width:768px){
+
+    .compare-header{
+        text-align:center;
+        padding:25px;
+    }
+
+    .compare-upload{
+        margin-bottom:20px;
+    }
+
+    .similarity-circle{
+        width:140px;
+        height:140px;
+    }
+
+    .similarity-circle h2{
+        font-size:34px;
+    }
+
+    .compare-action .btn{
+        width:100%;
+    }
+
+    .compare-table{
+        overflow-x:auto;
+    }
+
+    .result-card{
+        padding:18px;
+    }
+
+}

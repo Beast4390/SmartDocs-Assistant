@@ -1,0 +1,319 @@
+/*==================================================
+    SmartDocs Assistant
+    settings.css
+==================================================*/
+
+/*==============================
+    Settings Header
+==============================*/
+
+.settings-header{
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+    color:#fff;
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.settings-header h2{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.settings-header p{
+    opacity:.9;
+    margin:0;
+}
+
+/*==============================
+    Settings Cards
+==============================*/
+
+.settings-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.settings-card:hover{
+    transform:translateY(-5px);
+}
+
+.settings-card h5{
+    font-weight:700;
+    margin-bottom:20px;
+    color:#1E293B;
+}
+
+.settings-card p{
+    color:#64748B;
+}
+
+/*==============================
+    Profile Section
+==============================*/
+
+.profile-section{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #DBEAFE;
+}
+
+.profile-info h4{
+    margin-bottom:6px;
+    font-weight:700;
+}
+
+.profile-info span{
+    color:#64748B;
+}
+
+/*==============================
+    Form Controls
+==============================*/
+
+.form-label{
+    font-weight:600;
+    color:#334155;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    border:1px solid #CBD5E1;
+    padding:12px 15px;
+    transition:.3s;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+/*==============================
+    Toggle Switch
+==============================*/
+
+.form-check-input{
+    width:3rem;
+    height:1.5rem;
+    cursor:pointer;
+}
+
+.form-check-input:checked{
+    background-color:#2563EB;
+    border-color:#2563EB;
+}
+
+/*==============================
+    Theme Cards
+==============================*/
+
+.theme-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.theme-card{
+    border:2px solid #E5E7EB;
+    border-radius:16px;
+    padding:20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.theme-card:hover{
+    border-color:#2563EB;
+    transform:translateY(-5px);
+}
+
+.theme-card.active{
+    border-color:#2563EB;
+    background:#EFF6FF;
+}
+
+.theme-preview{
+    height:90px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.preview-light{
+    background:#F8FAFC;
+    border:1px solid #CBD5E1;
+}
+
+.preview-dark{
+    background:#1E293B;
+}
+
+.preview-blue{
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+}
+
+/*==============================
+    Notification List
+==============================*/
+
+.notification-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.notification-item:last-child{
+    border-bottom:none;
+}
+
+.notification-item h6{
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.notification-item small{
+    color:#64748B;
+}
+
+/*==============================
+    Storage Card
+==============================*/
+
+.storage-card{
+    background:#EFF6FF;
+    border-radius:16px;
+    padding:20px;
+}
+
+.storage-card h6{
+    font-weight:700;
+}
+
+.storage-card .progress{
+    height:10px;
+    margin:15px 0;
+}
+
+.storage-card .progress-bar{
+    background:#2563EB;
+}
+
+/*==============================
+    Security
+==============================*/
+
+.security-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.security-item i{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#EFF6FF;
+    color:#2563EB;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.security-item h6{
+    margin-bottom:4px;
+    font-weight:600;
+}
+
+.security-item p{
+    margin:0;
+    color:#64748B;
+}
+
+/*==============================
+    Save Button
+==============================*/
+
+.settings-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:25px;
+}
+
+.settings-actions .btn{
+    min-width:140px;
+}
+
+/*==============================
+    Danger Zone
+==============================*/
+
+.danger-zone{
+    border:2px solid #FECACA;
+    background:#FEF2F2;
+}
+
+.danger-zone h5{
+    color:#DC2626;
+}
+
+.danger-zone p{
+    color:#7F1D1D;
+}
+
+/*==============================
+    Responsive
+==============================*/
+
+@media(max-width:768px){
+
+    .settings-header{
+        text-align:center;
+        padding:25px;
+    }
+
+    .profile-section{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .theme-grid{
+        grid-template-columns:1fr;
+    }
+
+    .notification-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .settings-actions{
+        flex-direction:column;
+    }
+
+    .settings-actions .btn{
+        width:100%;
+    }
+
+    .security-item{
+        align-items:flex-start;
+    }
+
+}
